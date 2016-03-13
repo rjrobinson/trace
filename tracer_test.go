@@ -7,7 +7,7 @@ import (
 
 func TestNew(t *testing.T) {
 	var buf bytes.Buffer
-	tracer := New(&buf)
+	tracer := NewTracer(&buf)
 
 	if tracer == nil {
 		t.Error("Return from New should not be nil")

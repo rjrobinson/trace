@@ -19,6 +19,8 @@ func (t *tracer) Trace(a ...interface{}) {
 	t.out.Write([]byte(fmt.Sprint(a...)))
 	t.out.Write([]byte("\n"))
 }
-func New(w io.Writer) Tracer {
+
+// NewTracer ...
+func NewTracer(w io.Writer) Tracer {
 	return &tracer{out: w}
 }
